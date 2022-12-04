@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "КСР", "КСР.vcxproj", "{291266CB-8D4F-4999-96A4-0426FCEC4E3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{291266CB-8D4F-4999-96A4-0426FCEC4E3D}.Debug|x64.ActiveCfg = Debug|x64
+		{291266CB-8D4F-4999-96A4-0426FCEC4E3D}.Debug|x64.Build.0 = Debug|x64
+		{291266CB-8D4F-4999-96A4-0426FCEC4E3D}.Debug|x86.ActiveCfg = Debug|Win32
+		{291266CB-8D4F-4999-96A4-0426FCEC4E3D}.Debug|x86.Build.0 = Debug|Win32
+		{291266CB-8D4F-4999-96A4-0426FCEC4E3D}.Release|x64.ActiveCfg = Release|x64
+		{291266CB-8D4F-4999-96A4-0426FCEC4E3D}.Release|x64.Build.0 = Release|x64
+		{291266CB-8D4F-4999-96A4-0426FCEC4E3D}.Release|x86.ActiveCfg = Release|Win32
+		{291266CB-8D4F-4999-96A4-0426FCEC4E3D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1918B874-3C70-481D-B408-053DA6B02F9D}
+	EndGlobalSection
+EndGlobal
