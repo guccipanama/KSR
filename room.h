@@ -24,7 +24,7 @@ private:
     float ppol;
 
     float coeffoflux;
-
+    std::vector<std::string> rejlamps;
     struct lamp
     {
         Lamp a;
@@ -79,6 +79,13 @@ public:
     float GetPurchaseCost(int i);
     float GetElectricityCost(int i);
     float GetCost(int i);
+
+    float GetMeasLO(int i);
+    float GetDeclLO(int i);
+    float GetRipple(int i);
+
+    bool GetIsEmpty();
+    std::vector<std::string>& GetRejected();
 
     Room();
     Room(std::string name, int neededill, int neededrip, int a, int b, int c, float hc, float hp, float coeffofoperation, float ppot, float pst, float ppol, std::vector<Lamp> lamps);

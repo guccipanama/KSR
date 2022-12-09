@@ -6,7 +6,8 @@
 #include <windows.h>
 #include <string>
 
-static float s = 0;
+using namespace System;
+using namespace System::Windows::Forms;
 
 class Lamp
 {
@@ -53,5 +54,6 @@ public:
     float GetMeasLumflux();
     float GetMeasLO();
     float GetMeasRipple();
+    void Declare(std::string name, int type, float cost, float power, float lumflux, float duration);
     void Measure(float voltage, float amperage, float illumination, float ripple);
 };

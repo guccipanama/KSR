@@ -39,6 +39,8 @@ Room::Room(std::string name, int neededill, int neededrip, int a, int b, int c, 
             tmp.a = lamps[i];
             this->lampsss.push_back(tmp);
         }
+        else
+            rejlamps.push_back(lamps[i].GetName());
     }
 }
 
@@ -118,9 +120,9 @@ void Room::Measurement()
         lampsss[i].Nb = round(width / h);
         lampsss[i].N = lampsss[i].Na * lampsss[i].Nb;
 
-        if (lampsss[i].a.GetType() == 1)
+        if (lampsss[i].a.GetType() == 0)
             lampsss[i].n = 5;
-        else if (lampsss[i].a.GetType() == 3 || lampsss[i].a.GetType() == 3 || lampsss[i].a.GetType() == 4)
+        else if (lampsss[i].a.GetType() == 1 || lampsss[i].a.GetType() == 2)
             lampsss[i].n = 2;
         lampsss[i].Nn = lampsss[i].N * lampsss[i].n;
 
@@ -279,5 +281,30 @@ float Room::GetElectricityCost(int i)
 float Room::GetCost(int i)
 {
     return lampsss[i].cost;
+}
+
+float Room::GetMeasLO(int i)
+{
+    return lampsss[i].a.GetMeasLO();
+}
+
+float Room::GetDeclLO(int i)
+{
+    return lampsss[i].a.GetDeclLO();
+}
+
+float Room::GetRipple(int i)
+{
+    return lampsss[i].a.GetMeasRipple();
+}
+
+bool Room::GetIsEmpty()
+{
+    return lampsss.empty();
+}
+
+std::vector<std::string>& Room::GetRejected()
+{
+    return rejlamps;
 }
 

@@ -9,6 +9,14 @@ Lamp::Lamp()
     spec_1.lumflux = 0;
     spec_1.lightoutput = 0;
     spec_1.duration = 0;
+
+    spec_2.voltage = 0;
+    spec_2.amperage = 0;
+    spec_2.illumination = 0;
+    spec_2.ripple = 0;
+    spec_2.power = 0;
+    spec_2.lumflux = 0;
+    spec_2.lightoutput = 0;
 }
 
 Lamp::Lamp(std::string name, int type, float cost, float power, float lumflux, float duration)
@@ -90,6 +98,17 @@ float Lamp::GetMeasLO()
 float Lamp::GetMeasRipple()
 {
     return spec_2.ripple;
+}
+
+void Lamp::Declare(std::string name, int type, float cost, float power, float lumflux, float duration)
+{
+    this->name = name;
+    this->type = type;
+    this->cost = cost;
+    spec_1.power = power;
+    spec_1.lumflux = lumflux;
+    spec_1.lightoutput = lumflux / power;
+    spec_1.duration = duration;
 }
 
 void Lamp::Measure(float voltage, float amperage, float illumination, float ripple)
